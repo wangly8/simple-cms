@@ -1,0 +1,44 @@
+
+.spinner {
+    text-align: center margin-left : 50 %;
+    height: 35px;
+    width: 70%;
+    overflow: hidden;
+
+}
+
+.spinner .value {
+    height: 33px;
+    text-align: center;
+    width: 30%;
+    position: relative;
+}
+
+.spinner button {
+
+    line-height: 1px;
+    margin: 0
+}
+
+.spinner .decrease {
+    background-position: 0 -50px;
+    cursor: pointer;
+    text-indent: -10000px
+
+}
+
+.spinner .decrease[disabled] {
+
+    cursor: default
+}
+
+.spinner .increase {
+    background-position: 0 0;
+    cursor: pointer;
+    text-indent: -10000px
+}
+
+.spinner .increase[disabled] {
+
+    cursor: default
+}

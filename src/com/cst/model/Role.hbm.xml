@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.cst.model.Role" table="tb_role_info" catalog="simplecms">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="roleName" type="string">
+            <column name="role_name" length="32" />
+        </property>
+        <property name="roleCreateTime" type="string">
+            <column name="role_create_time"/>
+        </property>
+        <property name="roleDescrib" type="string">
+            <column name="role_describ" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

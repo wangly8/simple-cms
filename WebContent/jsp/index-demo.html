@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>大连华信</title>
+    <!-- ======基础样式开始======-->
+    <link href="css/bootstrap/style.default.css" rel="stylesheet">
+    <!--<link href="js/tab-page/tab-control.css" rel="stylesheet">-->
+    <!--换肤-->
+    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <!--当前页使用css-->
+
+    <link href="js/perfect-scrollbar-0.4.1/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/bootstrap/html5shiv.js"></script>
+    <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+<style>
+    body,html{
+        height:100%;
+    }
+    /*左侧菜单滚动条插件必须css*/
+    .leftpanel {overflow: hidden;}
+    /*.leftpanel-collapsed .nav-bracket .children {display:none;}*/
+</style>
+</head>
+
+<body class="stickyheader">
+<!--[if lte IE 8]>
+<div class="alert alert-danger" style="position:fixed;top:0;left:0;right:0;z-index:9999;">
+    <i class="fa fa-warning"></i>
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    您的浏览器版本过低，请使用现代浏览器访问,以得到更好的操作体验！推荐使用谷歌/火狐浏览器。
+</div>
+<![endif]-->
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+
+<section>
+
+    <div class="leftpanel sticky-leftpanel">
+        <div class="leftpanelinner">
+
+            <!-- This is only visible to small devices -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media userlogged">
+                <span class="pull-left">
+                  <i class="fa fa-user"></i>
+                </span>
+
+                    <div class="media-body">
+                        <h4 class="text-primary">张宏川</h4>
+                    </div>
+                </div>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="locked.html"><i class="fa fa-sign-out"></i> <span>注销</span></a></li>
+                </ul>
+            </div>
+
+            <a class="menutoggle"><i class="fa fa-bars"></i></a>
+            <ul class="nav nav-pills nav-stacked nav-bracket">
+                <li></li>
+                <li class="active"><a href="portal/index/home-page.html" target="mainFrame"><i class="fa fa-home"></i> <span>主页</span></a></li>
+                <li class="nav-parent"><a href=""><i class="fa fa-bar-chart-o"></i> <span>菜单演示</span></a>
+                    <ul class="children">
+                        <li class="nav-third"><a href="javascript:void(0);"> 订单管理</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 订单监控</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 订单查询</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 订单明细查询</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 海外直邮订单管理</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 海外直邮订单查询</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 海外直邮订单批量更新</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 免税订单管理</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 免税预订订单查询</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 免税预订订单批量更新</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);"> 售后管理</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-parent"><a href=""><i class="fa fa-money"></i> <span>菜单演示</span></a>
+                    <ul class="children">
+                        <li class="nav-third"><a href="javascript:void(0);"> 财务管理</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 采购预付管理</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 结算管理</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 付款管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 财务报表</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 入库明细表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 出库明细表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 库存实时查询表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 收发存汇总表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 商品销售查询表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 正向订单收入成本报表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 正向订单信息报表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 退货订单信息报表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 退货订单收入成本报表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 供应商付款情况查询表</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 财务退款管理</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 订单取消退款申请</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 售后退款申请</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 退款审核列表</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 付款导出管理</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 付款确认管理</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 直连退款处理</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 综合查询主页</a></li>
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 综合查询明细页</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 财务应用</a>
+                            <ul class="nav-third-children">
+                                <li><a href="portal/goods/goods-edit.html" target="mainFrame"> 订单银行实时对账</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-parent"><a href=""><i class="fa fa-magic"></i> <span>组件库</span></a>
+                    <ul class="children">
+                        <li><a href="datepicker.html" target="mainFrame"> <span>时间控件-年月日</span></a></li>
+                        <li><a href="plusin/dateTimePicker/dateTimePicker.html" target="mainFrame"> <span>时间控件-年月日时分</span></a></li>
+                        <li><a href="auto-complete.html" target="mainFrame"> <span>自动补全</span></a></li>
+                        <li><a href="modal.html" target="mainFrame"> <span>div弹窗演示</span></a></li>
+                        <li><a href="multiselect.html" target="mainFrame"> <span>左右互选multiselect</span></a></li>
+                        <li><a href="select-multi.html" target="mainFrame"> <span>下拉多选</span></a></li>
+                        <li><a href="x-editable.html" target="mainFrame"> <span>实时编辑</span></a></li>
+                        <li><a href="form-validation.html" target="mainFrame"> <span>表单验证</span></a></li>
+                        <li><a href="tables.html" target="mainFrame"> <span>dateTable</span></a></li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 编辑器</a>
+                            <ul class="nav-third-children">
+                                <li><a href="plusin/ueditor1_4_3_1-src/_examples/index.html" target="mainFrame"> 完整版</a></li>
+                                <li><a href="plusin/umeditor1_2_2-src/_examples/index.html" target="mainFrame"> 精简版</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="plusin/zTree_v3/demo/cn/index.html" target="mainFrame"> <span>ztree演示</span></a></li>
+                        <li><a href="plusin/echarts-2.2.7/doc/example.html" target="mainFrame"> <span>eCharts</span></a></li>
+                        <li class="nav-third"><a href="javascript:void(0);"> 文件上传</a>
+                            <ul class="nav-third-children">
+                                <li><a href="plusin/webuploader-master/examples/cropper/index.html" target="mainFrame"> 单图带裁切</a></li>
+                                <li><a href="plusin/webuploader-master/examples/image-upload/index.html" target="mainFrame"> 多图上传</a></li>
+                                <li><a href="plusin/webuploader-master/examples/md5-demo/index.html" target="mainFrame"> md5</a></li>
+                                <li><a href="plusin/webuploader-master/examples/requirejs/index.html" target="mainFrame"> requirejs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-parent"><a href=""><i class="fa fa-magic"></i> <span>UI范例</span></a>
+                    <ul class="children">
+                        <li><a href="404.html" target="mainFrame"> <span>404页</span></a></li>
+                        <li><a href="500.html" target="mainFrame"> <span>500页</span></a></li>
+                        <li><a href="icon.html" target="mainFrame"> <span>图标</span></a></li>
+                        <li><a href="buttons.html" target="mainFrame"> <span>按钮</span></a></li>
+                        <li><a href="alerts.html" target="mainFrame"> <span>提示框</span></a></li>
+                        <li><a href="tabs-accordions.html" target="mainFrame"> <span>tab标签</span></a></li>
+                        <li><a href="widgets.html" target="mainFrame"> <span>模块</span></a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- leftpanelinner -->
+    </div>
+    <!-- leftpanel -->
+
+    <div class="mainpanel">
+
+        <div class="headerbar">
+            <div class="header-left">
+                <div class="topnav">
+                    <div class="logopanel">
+                        <h1 class="m-r-10 m-l-10"><img src="images/dhc-logo.png" height="30"></h1>
+                    </div>
+                    <!-- logopanel -->
+
+                </div>
+            </div>
+
+            <div class="toggle-bar-div visible-xs visible-sm">
+                <a class="toggle-bars" href="#"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="header-right hidden-xs">
+
+                <ul class="headermenu">
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default  tp-icon" >
+                                <i class="fa fa-sitemap"></i>
+                                北京一仓
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default tp-icon">
+                                <i class="fa  fa-graduation-cap"></i>
+                               技术部
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default tp-icon dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                张宏川
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                                <li><a href="#"><i class="fa fa-user"></i> 修改密码</a></li>
+                                <li><a href="locked.html"><i class="fa fa-sign-out"></i> 注销</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out"></i> 退出</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- header-right -->
+
+        </div>
+        <!-- headerbar -->
+        <iframe src="portal/index/home-page.html" scrolling="auto" frameborder="0"  class="" style="height:100%;width:100%;" name="mainFrame" id="mainFrame"></iframe>
+        <!-- contentpanel -->
+
+    </div>
+    <!-- mainpanel -->
+
+    <div class="footerpanel">
+        版权所有<i class="fa fa-copyright"></i>大连华信
+    </div>
+</section>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+                <h4 class="modal-title">Large Modal</h4>
+            </div>
+            <div class="modal-body">...
+
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="js-edit-resouce-button btn btn-success">修改</a>
+                <a href="#" class="btn btn-primary" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--基础js开始-->
+<script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/modernizr.min.js"></script>
+<script src="js/bootstrap/retina.min.js"></script>
+<script src="js/bootstrap/custom.js"></script>
+<!--基础ji结束-->
+
+<!--当前页js开始-->
+    <!--左侧菜单滚动条-->
+    <script src="js/perfect-scrollbar-0.4.1/jquery.mousewheel.js"></script>
+    <script src="js/perfect-scrollbar-0.4.1/perfect-scrollbar.js"></script>
+    <!--弹出层-->
+    <script src="js/bootstrap-modle/CommonUtil.js"></script>
+<!--当前页js结束-->
+
+<script>
+//    左侧菜单滚动条
+    (function ($) {
+        $(window).load(function () {
+            $(".leftpanel").perfectScrollbar();
+            $(".leftpanel").perfectScrollbar("update");
+            $(".leftpanel-collapsed .nav-bracket > ul").perfectScrollbar();
+
+        });
+    })(jQuery);
+//设置左侧菜单使用perfectscrollar插件
+/*jQuery(".leftpanel-collapsed .leftpanel").perfectScrollbar("disable",true);
+jQuery(".leftpanel-collapsed .leftpanel").perfectScrollbar("update");*/
+    $(function(){
+//    右侧iframe高度定义
+        function Rise(){
+            var bh = $("body").height();
+            var hh = $(".headerbar").height();
+            var fh = $(".footerpanel").height();
+            $(".mainpanel").height(bh-hh-fh);
+        }
+        Rise();
+       $(window).resize(function(){
+           Rise();
+       })
+    })
+//    弹窗的方法样例
+        function compose(){
+            loading();
+            window.setTimeout(function(){
+                CommonUtils.DialogUtil.setError("保存出错");
+                CommonUtils.DialogUtil.show();
+                window.setTimeout(function(){
+                    CommonUtils.DialogUtil.showFrame("子窗口", "portal/goods/goods-pop.html", {h:400});
+                    CommonUtils.DialogUtil.hide();
+                },1500);
+            },1500);
+        }
+
+//loading弹窗
+        function loading(){
+            CommonUtils.DialogUtil.setLoading(2);
+            CommonUtils.DialogUtil.setTitle("我是loading的标题");
+            CommonUtils.DialogUtil.show();
+        }
+//错误弹窗
+        function error(){
+            CommonUtils.DialogUtil.setError("我是错误内容");
+            CommonUtils.DialogUtil.show();
+        }
+//自定义内容弹窗
+        function othersDefine(n){
+            CommonUtils.DialogUtil.setTitle("自定义标题");
+            CommonUtils.DialogUtil.setMsg("自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息自定义消息");
+            CommonUtils.DialogUtil.setAlertClass(n);//1-错误，2-警告，3-成功，4-提示
+            CommonUtils.DialogUtil.setButtonDefault();
+            CommonUtils.DialogUtil.show();
+        }
+//带按钮弹窗
+        function othersBtn(n){
+            CommonUtils.DialogUtil.setTitle("提示");
+            CommonUtils.DialogUtil.setMsg("是否删除所选择的数据？");
+            CommonUtils.DialogUtil.setAlertClass(4);
+            CommonUtils.DialogUtil.setButton('<button class="btn btn-danger" style="margin-right:20px" onclick="delDataAjax()"><i class="fa fa-times"></i>&nbsp;删除</button><button class="btn btn-primary" data-dismiss="modal">放弃删除</button>');
+            CommonUtils.DialogUtil.show();
+        }
+//警告弹窗
+        function othersNoBtn(n){
+            CommonUtils.DialogUtil.setTitle("警告");
+            CommonUtils.DialogUtil.setMsg("前方高能");
+            CommonUtils.DialogUtil.setAlertClass(2);
+            CommonUtils.DialogUtil.setButtonNo();
+            CommonUtils.DialogUtil.show();
+        }
+
+//打开弹窗
+        function top_dialogFrm(title,url,parms){
+            CommonUtils.DialogUtil.showFrame(title,url,parms);
+        }
+//关闭弹窗
+        function top_dialogFrm_close(){
+            CommonUtils.DialogUtil.closeFrame();
+        }
+
+</script>
+</body>
+</html>

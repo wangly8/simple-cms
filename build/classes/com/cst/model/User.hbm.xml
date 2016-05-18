@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-8-2 0:07:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.cst.model.User" table="tb_user_info" catalog="simplecms">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userAccount" type="string">
+            <column name="user_account" length="32" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="user_password" length="32" />
+        </property>
+        <property name="userTrueName" type="string">
+            <column name="user_true_name" length="32" />
+        </property>
+        <property name="userSex" type="string">
+            <column name="user_sex" length="32" />
+        </property>
+        <property name="userDepart" type="string">
+            <column name="user_depart" length="32" />
+        </property>
+        <property name="userPhone" type="string">
+            <column name="user_phone" length="32" />
+        </property>
+        <property name="userMobile" type="string">
+            <column name="user_mobile" length="32" />
+        </property>
+        <property name="userEmail" type="string">
+            <column name="user_email" length="32" />
+        </property>
+        <property name="userIdcard" type="string">
+            <column name="user_idcard" length="32" />
+        </property>
+        <property name="userState" type="java.lang.Character">
+            <column name="user_state" length="1" />
+        </property>
+        <property name="roleId" type="int">
+            <column name="role_id" not-null="true" />
+        </property>
+        <property name="userRegTime" type="string">
+            <column name="user_reg_time"/>
+        </property>
+        <property name="userLastTime" type="string">
+            <column name="user_last_time"/>
+        </property>
+        <property name="userTimes" type="string">
+            <column name="user_times" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

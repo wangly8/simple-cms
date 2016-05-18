@@ -1,0 +1,248 @@
+/***滚动选项卡***/
+	div.tab-control {
+		position:relative;
+		margin:5px 0 0 8px;
+	}
+
+	div.tab-control * {
+		font:normal normal 12px/24px "微软雅黑";
+	}
+
+	div.tab-control ul,
+	div.tab-control li {
+		position:relative;
+	}
+
+	div.tab-control ul {
+        overflow: hidden;
+	}
+
+	div.tab-control li {
+		cursor:pointer;
+		list-style-type:none;
+	}
+
+	div.tab-control a {
+		text-indent:-999999px;
+	}
+
+	div.tab-control input {
+		outline:none;
+		border:none;
+		background:none;
+	}
+
+	/* tab */
+
+	div.tab-control div.tab {
+		position:relative;
+        border-bottom: 2px solid #e5e5e5;
+	}
+
+	div.tab-control div.tab input {
+		position:absolute;
+		width:24px;
+		height:30px;
+		background-image:url("img/tab-control_tab_input.png");
+	}
+
+	div.tab-control div.tab input.prev {
+		left:0;
+		background-position:0 0;
+	}
+
+	div.tab-control div.tab input.next {
+		right:30px;
+		background-position:-40px 0;
+	}
+
+	div.tab-control div.tab input.find {
+		right:0;
+		background-position:-80px 0;
+	}
+
+	div.tab-control div.tab ul {
+        height:30px;
+        margin:0 54px 0 24px;
+
+	}
+
+	div.tab-control div.tab ul li {
+		float:left;
+		height:30px;
+		line-height:29px;
+		text-indent:10px;
+        width:auto;
+		padding-right:25px;
+        border-style: solid;
+        border-width:2px 1px 0px 1px;
+        border-radius:3px 3px 0 0;
+        background-color: #fff;
+        margin-right:5px;
+        font-weight: bold;
+        overflow: hidden;
+	}
+
+	div.tab-control div.tab ul a {
+		position:absolute;
+		right:8px;
+		top:8px;
+		width:15px;
+		height:15px;
+		background:url("img/tab-control_tab_li.png") -140px 0;
+	}
+
+	/* tab-find */
+
+	div.tab-control div.tab-find {
+		position:absolute;
+		z-index:2;
+		right:0;
+		top:0;
+		padding:4px;
+		box-shadow:0 0 2px #000;
+		background-color:#f3f3f3;
+	}
+
+	div.tab-control div.tab-find form {
+		width:174px;
+		height:24px;
+		background-image:url("img/tab-control_tab-find_form.png");
+	}
+
+	div.tab-control div.tab-find form input.text {
+		position:absolute;
+		left:8px;
+		top:8px;
+		width:140px;
+		height:16px;
+		line-height:16px;
+	}
+
+	div.tab-control div.tab-find ul {
+		margin-right:10px;
+		margin-top:4px;
+		-webkit-padding-start: 10px;
+	}
+
+	div.tab-control div.tab-find ul li {
+		padding-left:25px;
+		background:url("img/tab-control_tab-find_li.png") no-repeat;
+	}
+
+	div.tab-control div.tab-find ul a {
+		width:24px;
+		height:24px;
+		background:url("img/tab-control_tab-find_li.png") 0 -60px;
+	}
+
+	/* main */
+
+	div.tab-control div.main {
+		position:relative;
+	}
+
+	div.tab-control div.main iframe {
+		width:100%;
+		height:100%;
+		background-color:#fff;
+	}
+
+	/* color */
+
+	div.tab-control div.tab li {
+		color:#00a5e9;
+         padding-bottom:1px;
+        border-color:#d5d5d5;
+        border-top-color: #00a5e9;
+       background-color:#fff;
+
+	}
+
+	div.tab-control div.tab li.visited {
+        padding-bottom:0px;
+        color: #999;
+        border-top-color:#d5d5d5;
+        border-top-width:1px;
+        background:url("img/li-ba01.jpg") repeat-x 0 0 !important;
+
+	}
+
+	/* action */
+
+	div.tab-control div.tab.simple form {
+		display:none;
+	}
+
+	div.tab-control div.tab.simple ul {
+		margin:0;
+	}
+
+	div.tab-control div.tab input.scroll {
+		cursor:pointer;
+	}
+
+	div.tab-control div.tab input.scroll.prev {
+		background-position:0 -40px;
+	}
+
+	div.tab-control div.tab input.scroll.next {
+		background-position:-40px -40px;
+	}
+
+	div.tab-control div.tab li {
+		z-index:1;
+	}
+
+	div.tab-control div.tab li.visited {
+		background-position:0 -40px;
+	}
+
+	div.tab-control div.tab li.visited a {
+		background-position:-140px -40px;
+	}
+
+	div.tab-control div.tab-find.hidden {
+		display:none;
+	}
+
+	div.tab-control div.tab-find form.hover {
+		background-position:0 -30px;
+	}
+
+	div.tab-control div.tab-find form.visited {
+		background-position:0 -60px;
+	}
+
+	div.tab-control div.tab-find li a {
+		display:none;
+	}
+
+	div.tab-control div.tab-find li:hover a {
+		display:inline-block;
+	}
+
+	div.tab-control div.tab-find li.true {
+		background-position:0 -30px;
+	}
+
+	div.tab-control div.main iframe.visited {
+		display:none;
+	}
+
+	/* hack */
+
+	div.tab-control div.tab {
+		_width:100%;
+	}
+
+	div.tab-control div.tab-find  {
+		_right:29px;
+		_top:0;
+		 border-right:2px solid #000\9;
+		 border-bottom:2px solid #000\9;
+	}
+
+	div.tab-control div.tab-find li a {
+		_display:inline-block;
+	}

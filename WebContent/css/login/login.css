@@ -1,0 +1,74 @@
+body {
+    background: url("../../images/bodybg.png");
+}
+
+.center-content {
+    margin: 13% auto 0 auto;
+    width: 50%;
+}
+
+
+
+.nomargin {
+    height: 92px;
+    background: url("../../images/login-title.png") center no-repeat;
+    background-size: 90%;
+}
+
+.usename {
+    position: absolute;
+    left: 10px;
+    top: 110px;
+}
+
+.locks {
+    position: absolute;
+    left: 7px;
+    top: 163px;
+}
+
+.input-write input {
+    height: 40px;
+    width: 98%;
+    border: 1px #1682d9 solid;
+    background: url("../../images/inputbg.png") repeat-x;;
+    opacity: 0.7;
+    color: white;
+}
+
+.textnum {
+    width: 45% !important;
+}
+
+.num_img {
+    float: right;
+    width: 50%;
+
+}
+
+button {
+    height: 43px;
+    color: #ebebeb;
+    background: #19a2f9;
+}
+
+form a {
+    color: white;
+}
+
+.underlines:hover {
+    color: red;
+}
+
+input::-webkit-input-placeholder{
+    color: white;
+}
+input:-moz-placeholder {
+    color:white;
+}
+input::-moz-placeholder{
+    color:white;
+}
+input:-ms-input-placeholder {
+    color:white;
+}

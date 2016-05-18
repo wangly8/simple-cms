@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="../../css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="../../css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="../../css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../js/bootstrap/html5shiv.js"></script>
+    <script src="../../js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">查询</h4>
+        </div>
+        <div class="panel-body">
+            <form action="" class="form-horizontal ">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 mb15">
+                        <div class="form-group">
+                            <label class="control-label col-xs-5">工作组名称：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" id="" class="form-control">
+                                    <option value="">全部</option>
+                                    <option value="">手抄</option>
+                                    <option value="">电子版</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb15">
+                        <div class="form-group">
+                            <label class="control-label col-xs-5">是否启用：</label>
+                            <div class="col-xs-7">
+                                <select name="" id="" class="form-control">
+                                    <option value="">全部</option>
+                                    <option value="">手抄</option>
+                                    <option value="">电子版</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb15 pull-right text-right">
+                        <a href="#" class="btn btn-primary"><i class="fa fa-search"></i> 查询</a>
+                    </div>
+          </div>
+                <!-- row-->
+
+            </form>
+
+        </div>
+        
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">  <a class="btn btn-warning btn-xs" href="system-work-group-details.html"><i class="fa fa-group"></i> 新建工作组</a></div>
+            <h4 class="panel-title">工作组列表</h4>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover table-condensed">
+                    <thead>
+                    <tr>
+
+                        <th>序号</th>
+                        <th>工作组名称</th>
+                        <th>备注</th>
+                        <th>操作员</th>
+                        <th>操作时间</th>
+                        <th>是否启用</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>13:38</td>
+                        <td>13:38</td>
+                        <td>13:38</td>
+                        <td>13:38</td>
+                        <td><span class="badge badge-success badge-sm"><i class="fa fa-circle"></i> 启用</span></td>
+                        <td> <a class="btn btn-primary btn-sm" href="system-work-new-group.html"><i class="fa fa-eye"></i> 查看</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4324</td>
+                        <td>4432432</td>
+                        <td>12</td>
+                        <td>231</td>
+                        <td><span class="badge badge-warning badge-sm"><i class="fa fa-circle-o"></i> 停用</span></td>
+                        <td> <a class="btn btn-primary btn-sm" href="system-work-new-group.html"><i class="fa fa-eye"></i> 查看</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="dataTables_info pull-left" id="table1_info" role="status" aria-live="polite">显示从 1 到 4 共 4 页</div>
+                    <ul class="pagination pull-right">
+                        <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li ><a href="stock-litter-history-share.html">2</a></li>
+                        <li><a href="stock-warning-rules.html">3</a></li>
+                        <li><a href="stock-warning-rules-find.html">4</a></li>
+                        <li><a href="#" onclick="openDialog()">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/modernizr.min.js"></script>
+<script src="../../js/bootstrap/retina.min.js"></script>
+<script src="../../js/bootstrap/jquery-ui-1.10.3.min.js"></script>
+<script src="../../js/util/util.js"></script>
+
+</body>
+</html>

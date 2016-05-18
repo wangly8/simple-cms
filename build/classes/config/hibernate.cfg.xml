@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 是否显示sql执行 -->
+		<property name="show_sql">true</property>
+		<!-- 设置方言，即数据库的平台 -->
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<!-- 设置数据库驱动 -->
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<!-- 设置数据库url -->
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/simplecms?useUnicode=true&amp;characterEncoding=utf8
+		</property>
+		<!-- 设置连接用户名 -->
+		<property name="connection.username">root</property>
+		<!-- 设置连接密码 -->
+		<property name="connection.password">123456</property>
+		<!--Examda,是否使用数据库外连接-->
+ 		<property name="hibernate.use_out_join">True</property>		
+		 <!--是否将运行产生的sql语句输出到日志-->
+  	    <property name="hibernate.show_sql">True</property>
+		<!-- 设置映射的xml文件.注意格式为/ -->
+		<mapping resource="com/cst/model/User.hbm.xml"/>
+        <mapping resource="com/cst/model/Role.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

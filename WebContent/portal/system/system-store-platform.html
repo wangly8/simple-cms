@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="../../css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="../../css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="../../css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../js/bootstrap/html5shiv.js"></script>
+    <script src="../../js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title" onclick="opensuccess()">申请绑定</h4>
+        </div>
+        <div class="panel-body">
+            <h5 class="dark m-b-20" onclick="openwait()">已接入的商家平台</h5>
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail" title="淘宝接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail" title="京东接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail" title="亚马逊接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail" title="珍奥接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail" title="5173接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block ">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="" class="thumbnail" title="青岛网接入平台">
+                        <img src="../../images/textnum.png" alt="..." class="img-responsive center-block">
+                    </a>
+                </div>
+            </div>
+            <!-- row-->
+        </div>
+    </div>
+    <div class="text-center m-15 m-t-40">
+        <a href="javascrpt:void(0)" class="btn btn-primary m-l-20" onclick="openerron()"><i class="fa  fa-long-arrow-right"></i> 下一步</a>
+    </div>
+</div>
+<script src="../../js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/modernizr.min.js"></script>
+<script src="../../js/bootstrap/retina.min.js"></script>
+<script src="../../js/bootstrap/jquery-ui-1.10.3.min.js"></script>
+<script src="../../js/util/util.js"></script>
+<script>
+    function opensuccess(idea,content,order,btn) {
+        top.othersBtn && top.othersBtn("申请绑定", "您的商铺已被成功授权绑定，请等待平台审核。",3,"<button class='btn btn-success'><i class='fa fa-check'></i>&nbsp;完成</button>");
+    }
+    function openwait(idea,content,order,btn) {
+        top.othersBtn && top.othersBtn("申请绑定", "您的商铺正在等待审批，请等待第三方平台审核。",4,"<button class='btn btn-primary'><i class='fa fa-clock-o'></i>&nbsp;完成</button>");
+    }
+    function openerron(idea,content,order,btn) {
+        top.othersBtn && top.othersBtn("申请绑定", "对不起，您的商铺授权失败，请重新申请绑定。",1,"<button class='btn btn-warning' aria-hidden='true' data-dismiss='modal'><i class='fa fa-reply'></i> 返回</button>");
+    }
+</script>
+
+</body>
+</html>
