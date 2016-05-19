@@ -10,9 +10,9 @@ import com.framework.cache.CMSCache;
  * @author wangluyang
  *
  */
-public class CMSCacheImpl implements CMSCache{
+public class CMSCacheRedis implements CMSCache{
 
-	private final static Logger logger = Logger.getLogger(CMSCacheImpl.class);
+	private final static Logger logger = Logger.getLogger(CMSCacheRedis.class);
 	private RedisTemplate template;
 	private String systemKey;
 	
