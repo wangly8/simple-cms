@@ -1,8 +1,9 @@
 package com.framework.cache.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.ListOperations;
+import java.util.Set;
+
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SetOperations;
 
 import com.framework.cache.SetCache;
 
@@ -11,22 +12,50 @@ import com.framework.cache.SetCache;
  * @author wangluyang
  *
  */
-public class SetCacheRedis{
+public class SetCacheRedis implements SetCache{
 
 	private RedisTemplate template;
 	
-	@Autowired
+	@Override
+	public void add(String keyId, Object value) {
+		// TODO Auto-generated method stub
+		SetOperations set = this.template.opsForSet();
+		set.add(keyId, value);
+	}
+
+	@Override
+	public Object pop(String keyId) {
+		// TODO Auto-generated method stub
+		SetOperations set = this.template.opsForSet();
+		return set.pop(keyId);
+	}
+
+	@Override
+	public long getSize(String keyId) {
+		// TODO Auto-generated method stub
+		SetOperations set = this.template.opsForSet();
+		return set.size(keyId);
+	}
+
+	@Override
+	public void remove(String keyId, Object value) {
+		// TODO Auto-generated method stub
+		SetOperations set = this.template.opsForSet();
+		set.remove(keyId, value);
+	}
+
+	@Override
+	public Set getSet(String keyId) {
+		// TODO Auto-generated method stub
+		SetOperations set = this.template.opsForSet();
+		return set.members(keyId);
+	}
+	
+	public RedisTemplate getTemplate() {
+		return template;
+	}
+
 	public void setTemplate(RedisTemplate template) {
 		this.template = template;
-	}
-	
-	public void leftPush(String setKey, String value){
-		ListOperations lop = this.template.opsForList();
-		lop.leftPush(setKey, value);
-	}
-	
-	public void rightPush(String setKey, String value){
-		ListOperations lop = this.template.opsForList();
-		lop.rightPush(setKey, value);
 	}
 }

@@ -26,6 +26,7 @@ import com.cst.model.TestUser;
 import com.cst.model.User;
 import com.cst.service.UserService;
 import com.framework.cache.CMSCache;
+import com.framework.cache.SetCache;
 import com.framework.cache.manager.CacheManager;
 
 /**
@@ -95,15 +96,15 @@ public class UserController
 	@RequestMapping(value = "/saveTestUser")
 	public void saveTestUser()
 	{
-		CMSCache cache = CacheManager.getDefaultCache();
-		cache.put("123", "adawdwad");
+		SetCache cache = CacheManager.getDefaultSetCache();
+		cache.add("aaa", "AASD");
+		cache.add("aaa", "AASSSSS");
 	}
 	
 	@RequestMapping(value = "/getTestUser")
 	public void getTestUser()
 	{
-		CMSCache cache = CacheManager.getDefaultCache();
-		Object obj = cache.get("123");
-		System.out.println("----"+(String)obj);
+		SetCache cache = CacheManager.getDefaultSetCache();
+		System.out.println("----"+cache.pop("aaa"));
 	}
 }

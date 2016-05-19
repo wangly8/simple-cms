@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.ValueOperations;
 import com.framework.cache.CMSCache;
 
 /**
- * 
+ * 系统默认使用的cache  Redis Hash操作，可以保存任何数据类型
  * @author wangluyang
  *
  */

@@ -33,6 +33,10 @@
     	<property name="template"   ref="redisTemplate" />
     	<property name="systemKey"   value="cmsache" />
     </bean>
+    
+    <bean id="setCacheRedis" class="com.framework.cache.impl.SetCacheRedis">
+    	<property name="template"   ref="redisTemplate" />
+    </bean>
 
 	<bean id="catchMap" class="com.framework.cache.CacheFactoryBean">
     	<property name="catcheDefinitions">
@@ -48,5 +52,6 @@
      			<entry key="default" value-ref="catchMap"></entry>
      		</map>
      	</property>
+     	<property name="setCaches"   ref="setCacheRedis" />
      </bean>
 </beans>
