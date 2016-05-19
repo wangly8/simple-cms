@@ -17,7 +17,7 @@ public class CMSCacheRedis implements CMSCache{
 	private String systemKey;
 	
 	@Override
-	public Object get(Object key) {
+	public Object get(Object key) { 
 		// TODO Auto-generated method stub
 		return null;
 	}
