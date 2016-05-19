@@ -14,7 +14,7 @@ import com.framework.cache.SetCache;
  */
 public class SetCacheRedis implements SetCache{
 
-	private RedisTemplate template;
+	private RedisTemplate template; 
 	
 	@Override
 	public void add(String keyId, Object value) {
