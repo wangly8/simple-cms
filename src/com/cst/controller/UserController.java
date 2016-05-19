@@ -25,6 +25,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cst.model.TestUser;
 import com.cst.model.User;
 import com.cst.service.UserService;
+import com.framework.cache.CMSCache;
+import com.framework.cache.manager.CacheManager;
 
 /**
  * @author crazylion
@@ -93,14 +95,15 @@ public class UserController
 	@RequestMapping(value = "/saveTestUser")
 	public void saveTestUser()
 	{
-		TestUser user = new TestUser("123", "testuser", "1233");
-		System.out.println(userService.saveTestUser(user));
+		CMSCache cache = CacheManager.getDefaultCache();
+		cache.put("123", "adawdwad");
 	}
 	
 	@RequestMapping(value = "/getTestUser")
 	public void getTestUser()
 	{
-		TestUser user = userService.getTestUser("123");
-		System.out.println(user.getId()+user.getName()+user.getText());
+		CMSCache cache = CacheManager.getDefaultCache();
+		Object obj = cache.get("123");
+		System.out.println("----"+(String)obj);
 	}
 }

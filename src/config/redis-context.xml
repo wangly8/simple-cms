@@ -28,5 +28,25 @@
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
         <property name="connectionFactory"   ref="connectionFactory" />
     </bean>
+    
+    <bean id="cmsCacheRedis" class="com.framework.cache.impl.CMSCacheRedis">
+    	<property name="template"   ref="redisTemplate" />
+    	<property name="systemKey"   value="cmsache" />
+    </bean>
 
+	<bean id="catchMap" class="com.framework.cache.CacheFactoryBean">
+    	<property name="catcheDefinitions">
+    		<map>
+    			<entry key="default" value-ref="cmsCacheRedis"></entry>
+    		</map>
+    	</property>
+    </bean>
+	<!-- CacheManager.getCatche -->
+	<bean class = "com.framework.cache.manager.CacheManager">
+     	<property name="caches">
+     		<map>
+     			<entry key="default" value-ref="catchMap"></entry>
+     		</map>
+     	</property>
+     </bean>
 </beans>

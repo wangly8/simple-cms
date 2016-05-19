@@ -1,11 +1,8 @@
 package com.framework.cache;
 
-
 /**
- * Huilan cache 接口
  * 工程中所有的cache 都需要继承该接口
- *
- * @author Bilbo
+ * @author wangluyang
  *
  */
 public interface CMSCache{
