@@ -39,11 +39,6 @@ $(function() {
 				maxlength : '密码最多输入20个字符'
 			}
 		},
-
-		// Do not change code below
-		errorPlacement : function(error, element) {
-            error.insertAfter(element.parent())
-		},
 		/* 重写错误显示消息方法,以alert方式弹出错误消息 */  
         showErrors: function(errorMap, errorList) {  
             var msg = "";  
@@ -51,6 +46,7 @@ $(function() {
               msg += (v.message+"\r\n");  
             });  
             if(msg!="") alert(msg);  
-        }
+        },
+        onfocusout: false  
 	});
 });
