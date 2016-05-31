@@ -17,14 +17,7 @@ $(function() {
 			}
 		},
 		submitHandler : function(form) {
-			$(form).ajaxSubmit( {
-				beforeSubmit : showRequest,
-				success : showResponse,
-				url : 'login.htm',
-				type : "post",
-				dataType : "json",
-				resetForm : false
-			});
+			submitForm();
 		},
 		// Messages for form validation
 		messages : {
@@ -50,3 +43,25 @@ $(function() {
         onfocusout: false  
 	});
 });
+
+submitForm = function(){
+	$.ajax({
+        method: "POST",
+        url:  _base+"/admin/login",
+        dataType: "json",
+        showWait: true,
+        async: false,
+        data: $('#login-form').serialize(),
+        success: function (data) {
+        	if(data.success){
+        		if(data.data!=null && data.data.isRedirect){
+        			window.location.href = _base+data.data.redirectUrl;
+        		}else{
+        			alert(data.message);
+        		}
+        	}else
+        		alert(data.message);
+        },
+        error:function(XMLResponse){alert(XMLResponse.responseText)}
+    });
+}

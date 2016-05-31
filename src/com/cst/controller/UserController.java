@@ -34,7 +34,7 @@ import com.framework.cache.manager.CacheManager;
  * 
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/admin/user")
 public class UserController
 {
 	@Resource
@@ -63,7 +63,7 @@ public class UserController
 		User result = userService.getSingleUserById(id);
 		return result;
 	}
-	@RequestMapping(value = "/listall")
+	@RequestMapping(value = "/index")
 	public String getAllUser(Model model, HttpServletRequest request)
 	{
 //		List<User> result = userService.listAllUsers();
