@@ -19,22 +19,17 @@
 	<script>
 	    var _base = "${_base}";
 	</script>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="${_base}/images/favicon.png" type="image/png">
 
     <title>管理系统</title>
     <!-- ======基础样式开始======-->
-    <link href="css/bootstrap/style.default.css" rel="stylesheet">
-    <link href="js/tab-page/tab-control.css" rel="stylesheet">
+    <link href="${_base}/css/bootstrap/style.default.css" rel="stylesheet">
+    <link href="${_base}/js/tab-page/tab-control.css" rel="stylesheet">
     <!--换肤-->
-    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <link href="${_base}/css/bootstrap/style.katniss.css" rel="stylesheet">
     <!--IE8兼容样式-->
-    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <link href="${_base}/css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
     <!-- ======基础样式结束======-->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="js/bootstrap/html5shiv.js"></script>
-    <script src="js/bootstrap/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -241,7 +236,7 @@
                             <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
                                 <li><a href="#"><i class="fa fa-user"></i> 修改密码</a></li>
                                 <li><a href="locked.html"><i class="fa fa-sign-out"></i> 注销</a></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out"></i> 退出</a></li>
+                                <li><a href="${_base}/admin/logout"><i class="fa fa-sign-out"></i> 退出</a></li>
                             </ul>
                         </div>
                     </li>
@@ -306,20 +301,20 @@
     </div>
 </div>
 <!--基础js开始-->
-<script src="js/bootstrap/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/bootstrap/modernizr.min.js"></script>
-<script src="js/bootstrap/retina.min.js"></script>
-<script src="js/bootstrap/jquery-ui-1.10.3.min.js"></script>
-<script src="js/bootstrap/custom.js"></script>
+<script src="${_base}/js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="${_base}/js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="${_base}/js/bootstrap/bootstrap.min.js"></script>
+<script src="${_base}/js/bootstrap/modernizr.min.js"></script>
+<script src="${_base}/js/bootstrap/retina.min.js"></script>
+<script src="${_base}/js/bootstrap/jquery-ui-1.10.3.min.js"></script>
+<script src="${_base}/js/bootstrap/custom.js"></script>
 
 <!--基础ji结束-->
 <!--当前页js开始-->
     <!--右侧tab标签-->
-    <script src="js/tab-page/tab-control.js"></script>
+    <script src="${_base}/js/tab-page/tab-control.js"></script>
 <!--当前页js结束-->
-<script src="js/bootstrap-modle/CommonUtil.js"></script>
+<script src="${_base}/js/bootstrap-modle/CommonUtil.js"></script>
 <script>
 //    弹窗的方法样例
         function compose(){
