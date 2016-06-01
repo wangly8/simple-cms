@@ -13,7 +13,7 @@
 	    String _base = request.getContextPath();
 	    request.setAttribute("_base", _base);
 	    response.setHeader("Cache-Control", "no-cache");
-	    response.setDateHeader("Expires", 0);
+	    response.setDateHeader("Expires", -10);
 	    response.setHeader("Pragma", "No-cache");
 	%>
 	<script>
@@ -67,7 +67,7 @@
 
                 <li class="nav-parent"><a href=""><i class="fa fa-shopping-cart"></i> <span>商品管理</span></a>
                     <ul class="children">
-                        <li><a href="javascript:;" onclick="TabControlAppend('1-1','店铺商品管理','portal/goods/goods-list.html')"> 店铺商品管理</a></li>
+                        <li><a href="javascript:;" onclick="TabControlAppend('1-1','店铺商品管理','${_base}/portal/goods/goods-list.html')"> 店铺商品管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-2','平台店铺管理','portal/goods/goods-store.html')"> 平台店铺管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-3','商品分类管理','portal/goods/goods-class.html')"> 商品分类管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-4','商品价格管理','portal/goods/goods-price.html')"> 商品价格管理</a></li>
@@ -271,7 +271,7 @@
                 <!-- 主体 -->
                 <div class="main">
                     <!-- <iframe scrolling="auto" frameborder="0"></iframe>-->
-                    <iframe src="portal/index/home-page.html" scrolling="auto" frameborder="0" reload="undefined" class="" style="height:100%"></iframe>
+                    <iframe src="${_base}/jsp/index/home-page.jsp" scrolling="auto" frameborder="0" reload="undefined" class="" style="height:100%"></iframe>
                 </div>
             </div>
         <!-- contentpanel -->
@@ -305,7 +305,7 @@
 <script src="${_base}/js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
 <script src="${_base}/js/bootstrap/bootstrap.min.js"></script>
 <script src="${_base}/js/bootstrap/modernizr.min.js"></script>
-<script src="${_base}/js/bootstrap/retina.min.js"></script>
+<%-- <script src="${_base}/js/bootstrap/retina.min.js"></script> --%>
 <script src="${_base}/js/bootstrap/jquery-ui-1.10.3.min.js"></script>
 <script src="${_base}/js/bootstrap/custom.js"></script>
 
