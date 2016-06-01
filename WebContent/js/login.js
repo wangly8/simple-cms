@@ -32,15 +32,7 @@ $(function() {
 				maxlength : '密码最多输入20个字符'
 			}
 		},
-		/* 重写错误显示消息方法,以alert方式弹出错误消息 */  
-        showErrors: function(errorMap, errorList) {  
-            var msg = "";  
-            $.each( errorList, function(i,v){  
-              msg += (v.message+"\r\n");  
-            });  
-            if(msg!="") alert(msg);  
-        },
-        onfocusout: false  
+        onfocusout: false
 	});
 });
 
@@ -57,11 +49,12 @@ submitForm = function(){
         		if(data.data!=null && data.data.isRedirect){
         			window.location.href = _base+data.data.redirectUrl;
         		}else{
-        			alert(data.message);
+        			$.messager.alert("提示信息",data.message);
         		}
-        	}else
-        		alert(data.message);
+        	}else{
+        		$.messager.alert("错误信息",data.message);
+        	}
         },
-        error:function(XMLResponse){alert(XMLResponse.responseText)}
+        error:function(XMLResponse){$.messager.alert(XMLResponse.responseText)}
     });
 }

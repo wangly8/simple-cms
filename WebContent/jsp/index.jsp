@@ -67,7 +67,7 @@
 
                 <li class="nav-parent"><a href=""><i class="fa fa-shopping-cart"></i> <span>商品管理</span></a>
                     <ul class="children">
-                        <li><a href="javascript:;" onclick="TabControlAppend('1-1','店铺商品管理','${_base}/portal/goods/goods-list.html')"> 店铺商品管理</a></li>
+                        <li><a href="javascript:;" onclick="TabControlAppend('1-1','店铺商品管理','${_base}/jsp/goods/goods-list.jsp')"> 店铺商品管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-2','平台店铺管理','portal/goods/goods-store.html')"> 平台店铺管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-3','商品分类管理','portal/goods/goods-class.html')"> 商品分类管理</a></li>
                         <li><a href="javascript:;" onclick="TabControlAppend('1-4','商品价格管理','portal/goods/goods-price.html')"> 商品价格管理</a></li>

@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<!--[if IE 8]>
-<html lang="zh" class="ie8"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="zh">
-<!--<![endif]-->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=0.8;  user-scalable=0;" />
     <title>管理系统</title>
-    <!-- ======基础样式开始======-->
-    <link href="../../css/bootstrap/style.default.css" rel="stylesheet">
-    <!--换肤-->
-    <link href="../../css/bootstrap/style.katniss.css" rel="stylesheet">
-    <!--IE8兼容样式-->
-    <link href="../../css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
-    <!-- ======基础样式结束======-->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="../../js/bootstrap/html5shiv.js"></script>
-    <script src="../../js/bootstrap/respond.min.js"></script>
-    <![endif]-->
+   	<%@ include file="/common/inc.jsp"%>
 </head>
 <body>
 <div class="contentpanel">
@@ -215,13 +200,6 @@
         </div>
     </div>
 </div>
-<script src="../../js/bootstrap/jquery-1.11.1.min.js"></script>
-<script src="../../js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
-<script src="../../js/bootstrap/bootstrap.min.js"></script>
-<script src="../../js/bootstrap/modernizr.min.js"></script>
-<script src="../../js/bootstrap/retina.min.js"></script>
-<script src="../../js/bootstrap/jquery-ui-1.10.3.min.js"></script>
-<script src="../../js/util/util.js"></script>
 <script>
 </script>
 </body>

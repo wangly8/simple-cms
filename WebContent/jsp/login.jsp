@@ -65,7 +65,7 @@
                 
                     <input type="text" class="form-control uname" name="userName" id="userName" class="form-control" placeholder="用户名" />
                     <input type="password" class="form-control pword" name="passWord" id="passWord" class="form-control" placeholder="密码" />
-                    <a href=""><small>忘记密码？</small></a>
+                    <a href="" style="text-align: right;"><small>忘记密码？</small></a>
                     <button type="submit" class="btn btn-success btn-block">登录</button>
                     
                 </form>
@@ -91,8 +91,16 @@
 <script src="${_base}/js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
 <script src="${_base}/js/bootstrap/bootstrap.min.js"></script>
 <script src="${_base}/js/bootstrap/modernizr.min.js"></script>
-<script src="${_base}/js/bootstrap/retina.min.js"></script>
+<%-- <script src="${_base}/js/bootstrap/retina.min.js"></script> --%>
+<script src="${_base}/simple-cms/WebContent/js/jquery.bootstrap.min.js"></script>
 <script src="${_base}/js/jquery.validate/jquery.validate.min.js"></script>
+<script src="${_base}/js/jquery.bootstrap.min.js"></script>
 <script src="${_base}/js/login.js"></script>
+<style type="text/css">
+.error {
+    margin: 0 auto;
+    text-align: left;
+}
+</style>
 </body>
 </html>

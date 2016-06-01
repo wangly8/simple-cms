@@ -85,6 +85,8 @@ public class LoginController extends BaseHandler{
 				map.put("isRedirect", true);
 				map.put("redirectUrl", "/admin/user/index");
 				responseData = new ResponseData<Map<String,Object>>(ResponseData.AJAX_STATUS_SUCCESS, "登录成功", map);
+			}else{
+				responseData = new ResponseData<Map<String,Object>>(ResponseData.AJAX_STATUS_FAILURE, "用户名或密码错误");
 			}
 			
 			//密码错误3次不允许登陆，锁定用户信息并跳转到验证页面
