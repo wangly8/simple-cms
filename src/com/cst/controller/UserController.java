@@ -15,17 +15,17 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.cst.model.TestUser;
+import com.alibaba.fastjson.JSONObject;
+import com.cst.model.Subject;
 import com.cst.model.User;
+import com.cst.service.SubjectService;
 import com.cst.service.UserService;
-import com.framework.cache.CMSCache;
 import com.framework.cache.SetCache;
 import com.framework.cache.manager.CacheManager;
 
@@ -39,6 +39,10 @@ public class UserController
 {
 	@Resource
 	private UserService userService;
+	@Resource
+	private SubjectService subjectService;
+	
+	private static Logger logger = Logger.getLogger(UserController.class);
 	
 	public UserService getUserService()
 	{
@@ -48,6 +52,14 @@ public class UserController
 	public void setUsersService(UserService userService)
 	{
 		this.userService = userService;
+	}
+
+	public SubjectService getSubjectService() {
+		return subjectService;
+	}
+
+	public void setSubjectService(SubjectService subjectService) {
+		this.subjectService = subjectService;
 	}
 
 	@RequestMapping(value = "/add")
@@ -106,5 +118,12 @@ public class UserController
 	{
 		SetCache cache = CacheManager.getDefaultSetCache();
 		System.out.println("----"+cache.pop("aaa"));
+	}
+	
+	@RequestMapping(value = "/getSubjects")
+	public void getSubjects()
+	{
+		List<Subject> subjects = this.subjectService.getAll();
+		System.out.println(JSONObject.toJSON(subjects));
 	}
 }

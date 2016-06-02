@@ -14,9 +14,9 @@
 	<!-- 配置dataSource选用c3p0方式 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/simplecms?useUnicode=true&amp;characterEncoding=utf8" />
-		<property name="user" value="root" />
-		<property name="password" value="123456" />
+		<property name="jdbcUrl" value="jdbc:mysql://10.1.235.245:31306/dev_baas_sys1?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="user" value="sysusr01" />
+		<property name="password" value="sysusr01_123" />
 		<property name="minPoolSize" value="2" />
 		<property name="maxPoolSize" value="50" />
 		<property name="initialPoolSize" value="10" />
@@ -51,6 +51,15 @@
             <ref local="sessionFactory"/>
         </property>
     </bean>
+    
+    <bean id="baseDao" class="com.cst.daoImpl.BaseDaoImpl">  
+    	<property name="sessionFactory" ref="sessionFactory"/>  
+	</bean>  
+	
+	<bean id="subjectService" class="com.cst.serviceImpl.SubjectServiceImpl">  
+     <!-- 注入基类BaseDaoImpl -->  
+    	<property name="dao" ref="baseDao"/>  
+	</bean>
 	
 	<!-- 事务（注解 ）-->
     <!--tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/-->
