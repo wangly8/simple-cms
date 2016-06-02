@@ -3,9 +3,10 @@ package com.cst.service;
 import java.util.List;
 
 import com.cst.model.Subject;
+import com.cst.model.User;
 
 public interface SubjectService {
 
-	public List<Subject> getAll();
+	public List<User> getAll();
 	public Subject get(String id);
 }

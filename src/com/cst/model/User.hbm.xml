@@ -41,12 +41,14 @@
         <property name="roleId" type="int">
             <column name="role_id" not-null="true" />
         </property>
+        <!-- 
         <property name="userRegTime" type="string">
             <column name="user_reg_time"/>
         </property>
         <property name="userLastTime" type="string">
             <column name="user_last_time"/>
         </property>
+         -->
         <property name="userTimes" type="string">
             <column name="user_times" length="32" />
         </property>

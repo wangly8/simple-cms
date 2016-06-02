@@ -232,7 +232,7 @@ public class BaseDaoImpl extends HibernateDaoSupport implements BaseDao{
 		// TODO Auto-generated method stub
 		List<T> list = null;  
         try {  
-            this.getHibernateTemplate().findByCriteria(DetachedCriteria.forClass(c));  
+            list = this.getHibernateTemplate().findByCriteria(DetachedCriteria.forClass(c));  
         } catch (Exception e) {  
             throw new RuntimeException(e);  
         }  

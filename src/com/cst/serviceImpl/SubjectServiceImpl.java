@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.cst.dao.BaseDao;
 import com.cst.model.Subject;
+import com.cst.model.User;
 import com.cst.service.SubjectService;
 
 @Service("subjectServiceImpl")
@@ -20,10 +21,10 @@ public class SubjectServiceImpl implements SubjectService{
     }
 	
 	@Override
-	public List<Subject> getAll() {
+	public List<User> getAll() {
 		// TODO Auto-generated method stub
 		try {
-			return dao.getList(Subject.class);
+			return dao.getList(User.class);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -123,7 +123,7 @@ public class UserController
 	@RequestMapping(value = "/getSubjects")
 	public void getSubjects()
 	{
-		List<Subject> subjects = this.subjectService.getAll();
+		List<User> subjects = this.subjectService.getAll();
 		System.out.println(JSONObject.toJSON(subjects));
 	}
 }
