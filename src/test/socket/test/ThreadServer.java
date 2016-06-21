@@ -4,6 +4,11 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * socket多线程
+ * @author wangluyang
+ *
+ */
 public class ThreadServer {
 
 	//端口号
