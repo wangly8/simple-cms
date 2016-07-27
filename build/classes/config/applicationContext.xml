@@ -51,6 +51,15 @@
             <ref local="sessionFactory"/>
         </property>
     </bean>
+    
+    <bean id="baseDao" class="com.cst.daoImpl.BaseDaoImpl">  
+    	<property name="sessionFactory" ref="sessionFactory"/>  
+	</bean>  
+	
+	<bean id="subjectService" class="com.cst.serviceImpl.SubjectServiceImpl">  
+     <!-- 注入基类BaseDaoImpl -->  
+    	<property name="dao" ref="baseDao"/>  
+	</bean>
 	
 	<!-- 事务（注解 ）-->
     <!--tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/-->

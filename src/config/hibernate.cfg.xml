@@ -14,12 +14,12 @@
 		</property>
 		<!-- 设置数据库url -->
 		<property name="connection.url">
-			jdbc:mysql://localhost:3306/simplecms?useUnicode=true&amp;characterEncoding=utf8
+			jdbc:mysql://10.1.235.245:31306/dev_baas_sys1?useUnicode=true&amp;characterEncoding=utf8
 		</property>
 		<!-- 设置连接用户名 -->
-		<property name="connection.username">root</property>
+		<property name="connection.username">sysusr01</property>
 		<!-- 设置连接密码 -->
-		<property name="connection.password">123456</property>
+		<property name="connection.password">sysusr01_123</property>
 		<!--Examda,是否使用数据库外连接-->
  		<property name="hibernate.use_out_join">True</property>		
 		 <!--是否将运行产生的sql语句输出到日志-->
