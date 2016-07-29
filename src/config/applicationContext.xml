@@ -11,12 +11,19 @@
 	</bean>
 	-->
 	
+	<!-- 加载配置文件 -->
+    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+	    <property name="locations">
+	      <value>classpath:config/jdbc.properties</value>
+	    </property>
+  	</bean>
+	
 	<!-- 配置dataSource选用c3p0方式 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://10.1.235.245:31306/dev_baas_amc1?useUnicode=true&amp;characterEncoding=utf8" />
-		<property name="user" value="amcusr01" />
-		<property name="password" value="amcusr01_123" />
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
 		<property name="minPoolSize" value="2" />
 		<property name="maxPoolSize" value="50" />
 		<property name="initialPoolSize" value="10" />
