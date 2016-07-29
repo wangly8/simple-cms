@@ -12,14 +12,16 @@ package com.cst.serviceImpl;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import com.cst.dao.PermissionDao;
+import com.cst.model.AmcInvoiceLog;
 import com.cst.model.Permission;
 import com.cst.service.PermissionService;
+import com.cst.util.HibernateUtil;
 
 /**
  * @author crazylion
@@ -27,49 +29,49 @@ import com.cst.service.PermissionService;
  */
 @Service("permissionServiceImpl")
 @Repository
-public class PermissionServiceImpl implements PermissionService
+public class PermissionServiceImpl extends BaseServiceImpl implements PermissionService
 {
-	@Resource
-	private PermissionDao permissionDao;
-	
-	public PermissionDao getPermissionDao()
-	{
-		return this.permissionDao;
-	}
-	
-	public void setPermissionDao(PermissionDao permissionDao)
-	{
-		this.permissionDao = permissionDao;
-	}
 	
 	@Override
-	public void addPermission(Permission permission)
-	{
-		permissionDao.addPermission(permission);
+	public void addPermission(Permission permission) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void deletePermission(int id)
-	{
-		permissionDao.deletePermission(id);
+	public void deletePermission(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void updatePermission(Permission permission)
-	{
-		permissionDao.updatePermission(permission);
+	public void updatePermission(Permission permission) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public Permission getPermissionById(int id)
-	{
-		return permissionDao.getSinglePermissionById(id);
+	public Permission getPermissionById(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public List<Permission> listAllPermissions()
-	{
-		return permissionDao.listAllPermissions();
+	public List<Permission> listAllPermissions() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
+	public List<AmcInvoiceLog> listAllInvoiceLog() {
+		// TODO Auto-generated method stub
+		List<AmcInvoiceLog> result = null;
+		try {
+			result = baseDao.getList(AmcInvoiceLog.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
 }

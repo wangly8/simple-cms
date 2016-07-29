@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cst.model.AmcInvoiceLog;
 import com.cst.model.Permission;
 import com.cst.service.PermissionService;
 
@@ -28,7 +29,7 @@ import com.cst.service.PermissionService;
  *
  */
 @Controller
-@RequestMapping("permission")
+@RequestMapping("admin/permission")
 public class PermissionController
 {
 	@Resource
@@ -72,11 +73,12 @@ public class PermissionController
 		return permissionService.getPermissionById(id);
 	}
 	
-	@RequestMapping(value = "/listall.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/listall")
 	@ResponseBody
-	public List<Permission> listAllPermissions()
+	public List<AmcInvoiceLog> listAllPermissions()
 	{
-		return permissionService.listAllPermissions();
+		List<AmcInvoiceLog> result = this.permissionService.listAllInvoiceLog();
+		return result;
 	}
 }
 

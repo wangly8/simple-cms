@@ -15,7 +15,8 @@ import com.cst.util.Page;
 /**
  * 增删改查组件实现类
  * @author wangluyang
- *
+ *	HibernateDaoSupport主要提供了两个方法 　public final HibernateTemplate getHibernateTemplate() ；  　　public final void setSessionFactory(SessionFactory sessionFactory) ；
+ *	其中，setSessionFactory方法接收来自Spring的applicationContext的依赖注入，接收了配置在Spring 中的SessionFactory实例，getHibernateTemplate方法用来利用刚才的SessionFactory生成Session， 再生成HibernateTemplate来完成数据库的访问。
  */
 public class BaseDaoImpl extends HibernateDaoSupport implements BaseDao{
 

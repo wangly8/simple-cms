@@ -12,6 +12,7 @@ package com.cst.service;
 
 import java.util.List;
 
+import com.cst.model.AmcInvoiceLog;
 import com.cst.model.Permission;
 
 /**
@@ -29,4 +30,6 @@ public interface PermissionService
 	public Permission getPermissionById(int id);
 	
 	public List<Permission> listAllPermissions();
+	
+	public List<AmcInvoiceLog> listAllInvoiceLog();
 }
