@@ -125,7 +125,5 @@ public class UserController
 	{
 		List<User> subjects = this.subjectService.getAll();
 		System.out.println(JSONObject.toJSON(subjects));
-		System.out.println(JSONObject.toJSON(subjects));
-		System.out.println(JSONObject.toJSON(subjects));
 	}
 }
