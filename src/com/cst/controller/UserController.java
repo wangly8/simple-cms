@@ -118,6 +118,7 @@ public class UserController
 	{
 		SetCache cache = CacheManager.getDefaultSetCache();
 		System.out.println("----"+cache.pop("aaa"));
+		System.out.println("----"+cache.pop("aaa"));System.out.println("----"+cache.pop("aaa"));
 	}
 	
 	@RequestMapping(value = "/getSubjects")
